@@ -38,7 +38,7 @@ mot.proximity.distance=100
 ro.config.dockobserver=1
 
 #swap volume keys in landscape mode
-ro.config.volume_keys_rotation=1
+ro.config.volume_keys_rotation=0
 
 windowsmgr.max_events_per_sec=60
 
