@@ -15,11 +15,10 @@
 #
 
 #
-# This is the product configuration for a generic GSM passion,
-# not specialized for any geography.
+# This is the product configuration for Latin American devices
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_latam.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
