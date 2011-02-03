@@ -106,6 +106,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/vold.fstab:system/etc/vold.fstab \
     device/motorola/umts_sholes/prebuilt/default.prop:system/default.prop \
     device/motorola/umts_sholes/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    device/motorola/umts_sholes/prebuilt/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
     device/motorola/umts_sholes/prebuilt/etc/init.d/10overclock:/system/etc/init.d/10overclock \
     device/motorola/umts_sholes/prebuilt/etc/location.cfg:/system/etc/location.cfg \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/default.prop:/system/etc/rootfs/default.prop \
@@ -140,6 +141,7 @@ $(call inherit-product-if-exists, vendor/motorola/umts_sholes/umts_sholes-vendor
 
 $(call inherit-product, build/target/product/full_base.mk)
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_latam.mk)
 
 PRODUCT_NAME := umts_sholes
 PRODUCT_DEVICE := umts_sholes

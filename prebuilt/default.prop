@@ -1,7 +1,7 @@
-ro.keyboard.type=euro_qwerty
-persist.sys.timezone=Europe/Brussels
+ro.keyboard.type=qwerty
+persist.sys.timezone=America/Sao_Paulo
 ro.fota.enable=0
-sms.convert.char.for.latam=0
+sms.convert.char.for.latam=1
 net.dns1=8.8.8.8
 net.dns2=8.8.4.4
 net.rmnet0.dns1=8.8.8.8
