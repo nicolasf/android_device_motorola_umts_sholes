@@ -141,7 +141,5 @@ $(call inherit-product-if-exists, vendor/motorola/umts_sholes/umts_sholes-vendor
 
 $(call inherit-product, build/target/product/full_base.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_latam.mk)
-
 PRODUCT_NAME := umts_sholes
 PRODUCT_DEVICE := umts_sholes
