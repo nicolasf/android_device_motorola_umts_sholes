@@ -24,6 +24,9 @@ ro.opengles.version = 131072
 # This is a high density device with more memory, so larger vm heaps for it.
 dalvik.vm.heapsize=26m
 
+# Nicolas: set startheapsize to try to improve the memory problem
+dalvik.vm.startheapsize=8m
+
 # dalvik-cache of both system and data/sdcard apps in /cache
 # (dexopt-cache-only overrides dexopt-data-only, so use it with care) 
 dalvik.vm.dexopt-cache-only=0
