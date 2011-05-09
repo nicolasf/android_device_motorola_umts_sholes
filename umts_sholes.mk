@@ -122,6 +122,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
     device/motorola/umts_sholes/prebuilt/etc/init.d/10overclock:/system/etc/init.d/10overclock \
     device/motorola/umts_sholes/prebuilt/etc/init.d/07app2ext:/system/etc/init.d/07app2ext \
+    device/motorola/umts_sholes/prebuilt/etc/init.d/02mountlogger:/system/etc/init.d/02mountlogger \
     device/motorola/umts_sholes/prebuilt/etc/init.d/60autoboot_or:/system/etc/init.d/60autoboot_or \
     device/motorola/umts_sholes/prebuilt/etc/location.cfg:/system/etc/location.cfg \
     device/motorola/umts_sholes/prebuilt/etc/rootfs/default.prop:/system/etc/rootfs/default.prop \
@@ -131,7 +132,11 @@ PRODUCT_COPY_FILES += \
     device/motorola/umts_sholes/prebuilt/bin/init_prep_keypad.sh:/system/bin/init_prep_keypad.sh \
     device/motorola/umts_sholes/prebuilt/bin/sh_hijack.sh:/system/bin/sh_hijack.sh \
     device/motorola/umts_sholes/prebuilt/bin/tcmd:/system/bin/tcmd \
-    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad.kcm.bin:/system/usr/keychars/sholesp2a-keypad.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-qwerty.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-euro_qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-euro_qwerty.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin:/system/usr/keychars/sholesp2a-keypad-qwertz.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-azerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-azerty.kcm.bin \
+    device/motorola/umts_sholes/prebuilt/usr/keychars/sholesp2a-keypad-swe_qwerty.kcm.bin:/system/usr/keychars/sholesp2a-keypad-swe_qwerty.kcm.bin \
     device/motorola/umts_sholes/prebuilt/lib/libgki.so:/system/lib/libgki.so \
     device/motorola/umts_sholes/prebuilt/lib/modules/symsearch.ko:/system/lib/modules/symsearch.ko \
     device/motorola/umts_sholes/prebuilt/lib/modules/slow-work.ko:/system/lib/modules/slow-work.ko \
