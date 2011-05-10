@@ -1,5 +1,6 @@
 #!/system/bin/sh
 #
 
-mount -o bind /data/logger /cache/logger
+rm -f /data/logger/*
+mount -o bind /cache/logger /data/logger
 
