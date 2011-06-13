@@ -97,27 +97,11 @@ on early-boot
     insmod /system/lib/modules/cpufreq_smartass.ko
     insmod /system/lib/modules/cpufreq_stats.ko
     insmod /system/lib/modules/overclock.ko
-
-# Adjust the out of memory thresholds to account for the larget
-# space on sholes.  These numbers are in pages (4k).  Must be kept
-# in sync with init.rc.  This must be done before the regular init.rc
-# since these properies can't change once set.
-#    setprop ro.FOREGROUND_APP_MEM 2048
-#    setprop ro.VISIBLE_APP_MEM 3072
-#    setprop ro.SECONDARY_SERVER_MEM 6144
-#    setprop ro.BACKUP_APP_MEM 6144
-#    setprop ro.HOME_APP_MEM 6144
-#    setprop ro.HIDDEN_APP_MEM 7168
-#    setprop ro.CONTENT_PROVIDER_MEM 8192
-#    setprop ro.EMPTY_APP_MEM 8192
     
     chmod 0666 /dev/DspBridge
     class_start media_early_init
 
 on boot
-
-# Overwrite what init.rc selected for the memory killer params to match above.
-#    write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,6144,7168,8192,8192
     
     chown compass compass /dev/lis331dlh
     chmod 660 /dev/lis331dlh
@@ -283,7 +267,7 @@ mount rootfs rootfs / ro remount
     chown system system /sys/devices/omapdss/display0/update_mode
 
 # Workaround for google maps freeze on launch
-    write /sys/block/mmcblk0/bdi/read_ahead_kb 0
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 2048
 
 # Start services
     exec /system/bin/mot_boot_mode
@@ -517,6 +501,11 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     oneshot
 
 service dhcpcd_tiwlan0 /system/bin/dhcpcd -ABKL
+    class post-zygote_services
+    disabled
+    oneshot
+
+service iprenew_tiwlan0 /system/bin/dhcpcd -n
     class post-zygote_services
     disabled
     oneshot
